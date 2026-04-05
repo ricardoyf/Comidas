@@ -21,7 +21,8 @@
     .hero h1 { margin: 0; font-size: 28px; line-height: 1.1; }
     .hero p { margin: 8px 0 0; opacity: .92; font-size: 14px; }
     .day-card { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 16px; margin-bottom: 14px; box-shadow: var(--shadow); }
-    .day-title { font-size: 22px; font-weight: 800; margin-bottom: 12px; color: var(--accent); }
+    .day-title { font-size: 22px; font-weight: 800; margin-bottom: 12px; color: var(--accent); display:flex; align-items:baseline; gap:8px; flex-wrap:wrap; }
+    .day-date { font-size: 18px; font-weight: 700; color: var(--text); opacity: .9; }
     .meal-block + .meal-block { margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--line); }
     .meal-label { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 700; margin-bottom: 8px; }
     .meal-content { display: flex; flex-direction: column; gap: 8px; }
@@ -41,7 +42,7 @@
       <p>Vista móvil vertical para consultar comidas y cenas desde cualquier dispositivo.</p>
     </header>
 <section class="day-card">
-      <div class="day-title">Lunes</div>
+      <div class="day-title"><span>Lunes</span><span class="day-date">06/04</span></div>
       <div class="meal-block">
         <div class="meal-label">Comida</div>
         <div class="meal-content"><div class="dish"><div class="dish-name">Pavo relleno</div><a class="recipe-btn" href="Recipes/Pavo relleno.html" target="_blank" rel="noopener">Receta</a></div></div>
@@ -51,7 +52,7 @@
         <div class="meal-content"><div class="dish"><div class="dish-name">Piadina Vikika</div><a class="recipe-btn" href="Recipes/Piadina Vikika.html" target="_blank" rel="noopener">Receta</a></div></div>
       </div>
     </section><section class="day-card">
-      <div class="day-title">Martes</div>
+      <div class="day-title"><span>Martes</span><span class="day-date">07/04</span></div>
       <div class="meal-block">
         <div class="meal-label">Comida</div>
         <div class="meal-content"><div class="dish"><div class="dish-name">Judías verdes</div><a class="recipe-btn" href="Recipes/Judías verdes.html" target="_blank" rel="noopener">Receta</a></div><div class="dish"><div class="dish-name">Rapantes</div><a class="recipe-btn" href="Recipes/Rapantes.html" target="_blank" rel="noopener">Receta</a></div></div>
@@ -61,7 +62,7 @@
         <div class="meal-content"><div class="dish"><div class="dish-name">Pisto</div><a class="recipe-btn" href="Recipes/Pisto.html" target="_blank" rel="noopener">Receta</a></div><div class="dish"><div class="dish-name">Filetes</div><span class="recipe-btn" style="visibility:hidden">Receta</span></div></div>
       </div>
     </section><section class="day-card">
-      <div class="day-title">Miércoles</div>
+      <div class="day-title"><span>Miércoles</span><span class="day-date">08/04</span></div>
       <div class="meal-block">
         <div class="meal-label">Comida</div>
         <div class="meal-content"><div class="dish"><div class="dish-name">Pescado Horno</div><span class="recipe-btn" style="visibility:hidden">Receta</span></div><div class="dish"><div class="dish-name">Brécol al vapor</div><span class="recipe-btn" style="visibility:hidden">Receta</span></div></div>
@@ -71,7 +72,7 @@
         <div class="meal-content"><div class="dish"><div class="dish-name">Salmón AirFryer</div><a class="recipe-btn" href="Recipes/Salmón AirFryer.html" target="_blank" rel="noopener">Receta</a></div><div class="dish"><div class="dish-name">Verduras horno</div><a class="recipe-btn" href="Recipes/Verduras horno.html" target="_blank" rel="noopener">Receta</a></div></div>
       </div>
     </section><section class="day-card">
-      <div class="day-title">Jueves</div>
+      <div class="day-title"><span>Jueves</span><span class="day-date">09/04</span></div>
       <div class="meal-block">
         <div class="meal-label">Comida</div>
         <div class="meal-content"><div class="dish"><div class="dish-name">Alcachofas</div><a class="recipe-btn" href="Recipes/Alcachofas.html" target="_blank" rel="noopener">Receta</a></div><div class="dish"><div class="dish-name">Pechugas pollo</div><span class="recipe-btn" style="visibility:hidden">Receta</span></div></div>
@@ -81,7 +82,7 @@
         <div class="meal-content"><div class="dish"><div class="dish-name">Piadina</div><span class="recipe-btn" style="visibility:hidden">Receta</span></div></div>
       </div>
     </section><section class="day-card">
-      <div class="day-title">Viernes</div>
+      <div class="day-title"><span>Viernes</span><span class="day-date">10/04</span></div>
       <div class="meal-block">
         <div class="meal-label">Comida</div>
         <div class="meal-content"><div class="dish"><div class="dish-name">Salmón</div><span class="recipe-btn" style="visibility:hidden">Receta</span></div><div class="dish"><div class="dish-name">Boniato</div><span class="recipe-btn" style="visibility:hidden">Receta</span></div></div>
@@ -91,7 +92,7 @@
         <div class="meal-content"><div class="dish"><div class="dish-name">Cottage</div><span class="recipe-btn" style="visibility:hidden">Receta</span></div></div>
       </div>
     </section><section class="day-card">
-      <div class="day-title">Sábado</div>
+      <div class="day-title"><span>Sábado</span><span class="day-date">11/04</span></div>
       <div class="meal-block">
         <div class="meal-label">Comida</div>
         <div class="meal-content"><div class="empty">—</div></div>
@@ -101,7 +102,7 @@
         <div class="meal-content"><div class="dish"><div class="dish-name">Hamburguesas</div><span class="recipe-btn" style="visibility:hidden">Receta</span></div></div>
       </div>
     </section><section class="day-card">
-      <div class="day-title">Domingo</div>
+      <div class="day-title"><span>Domingo</span><span class="day-date">12/04</span></div>
       <div class="meal-block">
         <div class="meal-label">Comida</div>
         <div class="meal-content"><div class="empty">—</div></div>

@@ -11,7 +11,7 @@
       --text: #17212b;
       --muted: #66727f;
       --line: #e6ebf2;
-      --shadow: 0 14px 32px rgba(23, 33, 43, 0.08);
+      --shadow: 0 12px 28px rgba(23, 33, 43, 0.08);
       --hero1: #2563eb;
       --hero2: #7c3aed;
       --buy1: #0f766e;
@@ -37,16 +37,16 @@
         var(--bg);
       color: var(--text);
     }
-    .wrap { max-width: 900px; margin: 0 auto; padding: 16px 14px 28px; }
+    .wrap { max-width: 860px; margin: 0 auto; padding: 14px 12px 24px; }
     .hero, .buy-card, .compact-card, .history-card, .day-card {
       background: var(--card);
       border: 1px solid var(--line);
-      border-radius: 22px;
+      border-radius: 20px;
       box-shadow: var(--shadow);
     }
     .hero {
-      margin-bottom: 14px;
-      padding: 22px 18px;
+      margin-bottom: 12px;
+      padding: 18px 16px;
       background: linear-gradient(135deg, var(--hero1), var(--hero2));
       color: white;
       position: relative;
@@ -57,31 +57,31 @@
       position: absolute;
       right: -30px;
       bottom: -55px;
-      width: 180px;
-      height: 180px;
+      width: 160px;
+      height: 160px;
       border-radius: 50%;
       background: rgba(255,255,255,.10);
     }
-    .hero h1 { margin: 0; font-size: 30px; line-height: 1.05; position: relative; z-index: 1; }
-    .hero p { margin: 8px 0 0; font-size: 14px; line-height: 1.45; opacity: .95; max-width: 660px; position: relative; z-index: 1; }
+    .hero h1 { margin: 0; font-size: 28px; line-height: 1.02; position: relative; z-index: 1; }
+    .hero p { margin: 7px 0 0; font-size: 13px; line-height: 1.4; opacity: .95; max-width: 640px; position: relative; z-index: 1; }
 
-    .top-grid { display:grid; grid-template-columns:1fr; gap:14px; margin-bottom:14px; }
-    .compact-card, .buy-card, .history-card { padding: 16px; }
-    .eyebrow { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 800; margin-bottom: 8px; }
-    .week-range { font-size: 26px; font-weight: 900; color: #1d4ed8; }
-    .summary-note { margin-top: 8px; font-size: 14px; color: var(--muted); line-height: 1.5; }
-    .compact-line { font-size: 16px; font-weight: 800; line-height: 1.5; padding: 7px 0; border-bottom: 1px dashed #e5e7eb; }
+    .top-grid { display:grid; grid-template-columns:1fr; gap:12px; margin-bottom:12px; }
+    .compact-card, .buy-card, .history-card { padding: 14px; }
+    .eyebrow { font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 800; margin-bottom: 7px; }
+    .week-range { font-size: 24px; font-weight: 900; color: #1d4ed8; }
+    .summary-note { margin-top: 7px; font-size: 13px; color: var(--muted); line-height: 1.45; }
+    .compact-line { font-size: 15px; font-weight: 800; line-height: 1.45; padding: 5px 0; border-bottom: 1px dashed #e5e7eb; }
     .compact-line:last-child { border-bottom: 0; }
 
     details.buy-card { overflow: hidden; }
     details.buy-card > summary {
       list-style: none;
       cursor: pointer;
-      padding: 16px;
-      margin: -16px -16px 0;
+      padding: 14px;
+      margin: -14px -14px 0;
       background: linear-gradient(135deg, var(--buy1), var(--buy2));
       color: white;
-      font-size: 20px;
+      font-size: 18px;
       font-weight: 900;
       display:flex;
       align-items:center;
@@ -89,23 +89,23 @@
       gap:12px;
     }
     details.buy-card > summary::-webkit-details-marker { display:none; }
-    .buy-inner { padding-top: 14px; }
-    .buy-help { font-size: 13px; color: var(--muted); line-height: 1.5; margin-bottom: 12px; }
-    .buy-groups { display:grid; grid-template-columns:1fr; gap:12px; }
+    .buy-inner { padding-top: 12px; }
+    .buy-help { font-size: 12px; color: var(--muted); line-height: 1.4; margin-bottom: 10px; }
+    .buy-groups { display:grid; grid-template-columns:1fr; gap:10px; }
     .buy-group {
       border: 1px solid #dce7e6;
-      border-radius: 16px;
-      padding: 12px;
+      border-radius: 14px;
+      padding: 10px;
       background: #fbfefe;
     }
-    .buy-group-title { font-size: 16px; font-weight: 900; color: #0f766e; margin-bottom: 8px; }
-    .buy-item { display:flex; align-items:flex-start; gap:10px; padding:7px 0; font-size:15px; line-height:1.4; }
-    .buy-item input { margin-top: 3px; transform: scale(1.15); }
-    .buy-item small { display:block; color: var(--muted); font-size: 12px; margin-top: 2px; }
+    .buy-group-title { font-size: 14px; font-weight: 900; color: #0f766e; margin-bottom: 6px; }
+    .buy-items { display:grid; grid-template-columns:1fr; gap:4px; }
+    .buy-item { display:flex; align-items:center; gap:8px; padding:4px 0; font-size:14px; line-height:1.25; }
+    .buy-item input { transform: scale(1.1); }
     .buy-item.checked span { text-decoration: line-through; color: #7b8794; }
 
-    .days { display:grid; grid-template-columns:1fr; gap:12px; margin-bottom:14px; }
-    .day-card { padding: 14px; border-top: 6px solid transparent; }
+    .days { display:grid; grid-template-columns:1fr; gap:10px; margin-bottom:12px; }
+    .day-card { padding: 12px; border-top: 5px solid transparent; }
     .monday { background: linear-gradient(180deg, var(--monday), #fff); border-top-color: var(--monday-accent); }
     .tuesday { background: linear-gradient(180deg, var(--tuesday), #fff); border-top-color: var(--tuesday-accent); }
     .wednesday { background: linear-gradient(180deg, var(--wednesday), #fff); border-top-color: var(--wednesday-accent); }
@@ -114,22 +114,22 @@
     .saturday { background: linear-gradient(180deg, var(--saturday), #fff); border-top-color: var(--saturday-accent); }
     .sunday { background: linear-gradient(180deg, var(--sunday), #fff); border-top-color: var(--sunday-accent); }
 
-    .day-head { display:flex; justify-content:space-between; align-items:baseline; gap:10px; margin-bottom:10px; flex-wrap:wrap; }
-    .day-name { font-size: 22px; font-weight: 900; }
-    .day-date { font-size: 15px; font-weight: 800; color: var(--muted); background: rgba(255,255,255,.8); padding: 5px 10px; border-radius: 999px; border: 1px solid rgba(0,0,0,.05); }
-    .meal-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
-    .meal-block { border-radius: 16px; padding: 10px; border: 1px solid rgba(0,0,0,.05); background: rgba(255,255,255,.82); }
+    .day-head { display:flex; justify-content:space-between; align-items:baseline; gap:8px; margin-bottom:8px; flex-wrap:wrap; }
+    .day-name { font-size: 20px; font-weight: 900; }
+    .day-date { font-size: 14px; font-weight: 800; color: var(--muted); background: rgba(255,255,255,.8); padding: 4px 9px; border-radius: 999px; border: 1px solid rgba(0,0,0,.05); }
+    .meal-grid { display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+    .meal-block { border-radius: 14px; padding: 9px; border: 1px solid rgba(0,0,0,.05); background: rgba(255,255,255,.84); }
     .meal-block.comida { box-shadow: inset 0 0 0 999px rgba(219,234,254,.38); }
     .meal-block.cena { box-shadow: inset 0 0 0 999px rgba(237,233,254,.5); }
-    .meal-label { font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 800; margin-bottom: 8px; }
-    .meal-content { display:flex; flex-direction:column; gap:7px; }
+    .meal-label { font-size: 10px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 800; margin-bottom: 7px; }
+    .meal-content { display:flex; flex-direction:column; gap:6px; }
     .dish {
-      background: rgba(255,255,255,.88);
+      background: rgba(255,255,255,.9);
       border: 1px solid rgba(0,0,0,.06);
-      border-radius: 14px;
-      padding: 10px 11px;
-      font-size: 15px;
-      line-height: 1.3;
+      border-radius: 12px;
+      padding: 8px 9px;
+      font-size: 14px;
+      line-height: 1.25;
       font-weight: 800;
       display:flex;
       align-items:center;
@@ -138,7 +138,7 @@
     }
     .dish-main { min-width:0; flex:1; }
     .dish-name { display:block; }
-    .dish-meta { display:block; margin-top:3px; font-size:11px; color:var(--muted); font-weight:700; }
+    .dish-meta { display:block; margin-top:2px; font-size:10px; color:var(--muted); font-weight:700; }
     .dish-link { color: inherit; text-decoration: none; }
     .dish-link:hover { text-decoration: underline; }
     .recipe-btn {
@@ -146,40 +146,43 @@
       display:inline-flex;
       align-items:center;
       justify-content:center;
-      min-width:40px;
-      height:34px;
-      padding:0 10px;
-      border-radius:10px;
+      min-width:38px;
+      height:30px;
+      padding:0 9px;
+      border-radius:9px;
       border:1px solid #d6e4ff;
       background:#eef4ff;
       color:#0b57d0;
       text-decoration:none;
-      font-size:12px;
+      font-size:11px;
       font-weight:800;
     }
 
-    .history-card .links { display:grid; grid-template-columns:1fr; gap:8px; }
+    .history-card .links { display:grid; grid-template-columns:1fr; gap:7px; }
     .history-link {
       display:block;
-      padding:11px 13px;
-      border-radius:14px;
+      padding:10px 12px;
+      border-radius:12px;
       background:#f8fafc;
       border:1px solid #e6eaf2;
       color:inherit;
       text-decoration:none;
       font-weight:700;
+      font-size:14px;
     }
     .history-link:hover { background:#eef4ff; border-color:#cfe0ff; }
-    .footer { text-align:center; color:var(--muted); font-size:12px; margin-top:10px; }
+    .footer { text-align:center; color:var(--muted); font-size:11px; margin-top:10px; }
 
     @media (min-width: 860px) {
       .top-grid { grid-template-columns: 1fr 1fr; }
       .days { grid-template-columns: 1fr 1fr; }
       .buy-groups { grid-template-columns: 1fr 1fr; }
+      .buy-items { grid-template-columns: 1fr 1fr; column-gap: 12px; }
     }
     @media (max-width: 520px) {
       .meal-grid { grid-template-columns: 1fr; }
-      .day-name { font-size: 20px; }
+      .day-name { font-size: 18px; }
+      .compact-line { font-size: 14px; }
     }
   </style>
 </head>
@@ -187,14 +190,14 @@
   <main class="wrap">
     <header class="hero">
       <h1>Plan semanal</h1>
-      <p>Vista compacta, más visual y útil: semana completa, colores por día, recetas cuando existen y lista de la compra desplegable basada en tus platos canónicos.</p>
+      <p>Vista compacta, más visual y práctica: semana completa, recetas cuando existen y compra ordenada por departamentos de supermercado.</p>
     </header>
 
     <section class="top-grid">
       <article class="compact-card">
         <div class="eyebrow">Semana actual</div>
         <div class="week-range">13/04 - 19/04</div>
-        <div class="summary-note">Formato activo: día + fecha visible, vista semanal rápida y lista de la compra agrupada por plato.</div>
+        <div class="summary-note">Formato activo: día + fecha visible, vista rápida y lista de compra compacta pensada para móvil grande.</div>
       </article>
       <article class="compact-card">
         <div class="eyebrow">Resumen compacto</div>
@@ -211,75 +214,81 @@
     <details class="buy-card" open>
       <summary><span>Lista de la compra</span><span>▾</span></summary>
       <div class="buy-inner">
-        <div class="buy-help">Los ingredientes se agrupan por plato para ayudarte a pensar cantidades mejor. Las casillas se guardan en este navegador.</div>
-        <div class="buy-groups" id="buy-groups">
-          <div class="buy-group"><div class="buy-group-title">Filetes</div>
-            <label class="buy-item"><input type="checkbox" data-buy-id="filetes_ternera-pollo-pavo-solomillo-o-castana"><span>ternera, pollo, pavo, solomillo o castaña<small>Plato: Filetes</small></span></label>
+        <div class="buy-help">Ordenada por departamentos para comprar más rápido. Las casillas se guardan en este navegador.</div>
+        <div class="buy-groups">
+          <div class="buy-group">
+            <div class="buy-group-title">Verduras y hortalizas</div>
+            <div class="buy-items">
+              <label class="buy-item"><input type="checkbox" data-buy-id="verd_judias-verdes"><span>Judías verdes</span></label>
+              <label class="buy-item"><input type="checkbox" data-buy-id="verd_alcachofas"><span>Alcachofas</span></label>
+              <label class="buy-item"><input type="checkbox" data-buy-id="verd_puerro"><span>Puerro</span></label>
+              <label class="buy-item"><input type="checkbox" data-buy-id="verd_pimiento-rojo"><span>Pimiento rojo</span></label>
+              <label class="buy-item"><input type="checkbox" data-buy-id="verd_pimiento-verde"><span>Pimiento verde</span></label>
+              <label class="buy-item"><input type="checkbox" data-buy-id="verd_calabacin"><span>Calabacín</span></label>
+              <label class="buy-item"><input type="checkbox" data-buy-id="verd_champinones"><span>Champiñones</span></label>
+              <label class="buy-item"><input type="checkbox" data-buy-id="verd_zanahoria"><span>Zanahoria</span></label>
+              <label class="buy-item"><input type="checkbox" data-buy-id="verd_zanahorias"><span>Zanahorias</span></label>
+              <label class="buy-item"><input type="checkbox" data-buy-id="verd_tomate"><span>Tomate</span></label>
+              <label class="buy-item"><input type="checkbox" data-buy-id="verd_tomate-triturado"><span>Tomate triturado</span></label>
+              <label class="buy-item"><input type="checkbox" data-buy-id="verd_brocol"><span>Brécol</span></label>
+              <label class="buy-item"><input type="checkbox" data-buy-id="verd_calabaza"><span>Calabaza</span></label>
+              <label class="buy-item"><input type="checkbox" data-buy-id="verd_espinacas"><span>Espinacas</span></label>
+              <label class="buy-item"><input type="checkbox" data-buy-id="verd_lechuga"><span>Lechuga</span></label>
+              <label class="buy-item"><input type="checkbox" data-buy-id="verd_cherrys"><span>Cherrys</span></label>
+            </div>
           </div>
-          <div class="buy-group"><div class="buy-group-title">Judías verdes</div>
-            <label class="buy-item"><input type="checkbox" data-buy-id="judias_judias-verdes"><span>Judías verdes<small>Plato: Judías</small></span></label>
+
+          <div class="buy-group">
+            <div class="buy-group-title">Carnicería</div>
+            <div class="buy-items">
+              <label class="buy-item"><input type="checkbox" data-buy-id="car_ternera-pollo-pavo-solomillo-o-castana"><span>Ternera / pollo / pavo / solomillo / castaña</span></label>
+              <label class="buy-item"><input type="checkbox" data-buy-id="car_pechuga-pavo"><span>Pechuga de pavo</span></label>
+              <label class="buy-item"><input type="checkbox" data-buy-id="car_jamon-york"><span>Jamón york</span></label>
+              <label class="buy-item"><input type="checkbox" data-buy-id="car_hamburguesas"><span>Hamburguesas</span></label>
+              <label class="buy-item"><input type="checkbox" data-buy-id="car_pavo-taquitos"><span>Pavo en taquitos</span></label>
+            </div>
           </div>
-          <div class="buy-group"><div class="buy-group-title">Rapantes</div>
-            <label class="buy-item"><input type="checkbox" data-buy-id="rapantes_rapantes"><span>Rapantes<small>Plato: Rapantes</small></span></label>
+
+          <div class="buy-group">
+            <div class="buy-group-title">Pescadería</div>
+            <div class="buy-items">
+              <label class="buy-item"><input type="checkbox" data-buy-id="pes_rapantes"><span>Rapantes</span></label>
+              <label class="buy-item"><input type="checkbox" data-buy-id="pes_salmon"><span>Salmón</span></label>
+            </div>
           </div>
-          <div class="buy-group"><div class="buy-group-title">Alcachofas</div>
-            <label class="buy-item"><input type="checkbox" data-buy-id="alcachofas_alcachofas"><span>Alcachofas<small>Plato: Alcachofas</small></span></label>
-            <label class="buy-item"><input type="checkbox" data-buy-id="alcachofas_avecrem"><span>Avecrem<small>Plato: Alcachofas</small></span></label>
+
+          <div class="buy-group">
+            <div class="buy-group-title">Lácteos y huevos</div>
+            <div class="buy-items">
+              <label class="buy-item"><input type="checkbox" data-buy-id="lac_queso"><span>Queso</span></label>
+              <label class="buy-item"><input type="checkbox" data-buy-id="lac_queso-rallado"><span>Queso rallado</span></label>
+              <label class="buy-item"><input type="checkbox" data-buy-id="lac_huevo"><span>Huevo</span></label>
+              <label class="buy-item"><input type="checkbox" data-buy-id="lac_huevos-grandes"><span>Huevos grandes</span></label>
+              <label class="buy-item"><input type="checkbox" data-buy-id="lac_yogur-griego"><span>Yogur griego</span></label>
+            </div>
           </div>
-          <div class="buy-group"><div class="buy-group-title">Pisto</div>
-            <label class="buy-item"><input type="checkbox" data-buy-id="pisto_puerro"><span>Puerro<small>Plato: Pisto</small></span></label>
-            <label class="buy-item"><input type="checkbox" data-buy-id="pisto_pimiento-rojo"><span>Pimiento rojo<small>Plato: Pisto</small></span></label>
-            <label class="buy-item"><input type="checkbox" data-buy-id="pisto_pimiento-verde"><span>Pimiento verde<small>Plato: Pisto</small></span></label>
-            <label class="buy-item"><input type="checkbox" data-buy-id="pisto_calabacin"><span>Calabacín<small>Plato: Pisto</small></span></label>
-            <label class="buy-item"><input type="checkbox" data-buy-id="pisto_tomate-triturado"><span>Tomate triturado<small>Plato: Pisto</small></span></label>
+
+          <div class="buy-group">
+            <div class="buy-group-title">Despensa</div>
+            <div class="buy-items">
+              <label class="buy-item"><input type="checkbox" data-buy-id="des_avecrem"><span>Avecrem</span></label>
+              <label class="buy-item"><input type="checkbox" data-buy-id="des_lentejas"><span>Lentejas</span></label>
+              <label class="buy-item"><input type="checkbox" data-buy-id="des_garbanzos-cocidos"><span>Garbanzos cocidos</span></label>
+              <label class="buy-item"><input type="checkbox" data-buy-id="des_piadina"><span>Piadina</span></label>
+              <label class="buy-item"><input type="checkbox" data-buy-id="des_salsa-tomate"><span>Salsa de tomate</span></label>
+              <label class="buy-item"><input type="checkbox" data-buy-id="des_caldo-carne"><span>Caldo de carne</span></label>
+              <label class="buy-item"><input type="checkbox" data-buy-id="des_vino-blanco"><span>Vino blanco</span></label>
+              <label class="buy-item"><input type="checkbox" data-buy-id="des_nuez-moscada"><span>Nuez moscada</span></label>
+              <label class="buy-item"><input type="checkbox" data-buy-id="des_pimenton"><span>Pimentón</span></label>
+            </div>
           </div>
-          <div class="buy-group"><div class="buy-group-title">Pavo relleno</div>
-            <label class="buy-item"><input type="checkbox" data-buy-id="pavo-relleno_pechuga-de-pavo"><span>Pechuga de pavo<small>Plato: Pavo / Pavo relleno</small></span></label>
-            <label class="buy-item"><input type="checkbox" data-buy-id="pavo-relleno_jamon-york"><span>Jamón york<small>Plato: Pavo / Pavo relleno</small></span></label>
-            <label class="buy-item"><input type="checkbox" data-buy-id="pavo-relleno_queso"><span>Queso<small>Plato: Pavo / Pavo relleno</small></span></label>
-            <label class="buy-item"><input type="checkbox" data-buy-id="pavo-relleno_zanahoria"><span>Zanahoria<small>Plato: Pavo / Pavo relleno</small></span></label>
-            <label class="buy-item"><input type="checkbox" data-buy-id="pavo-relleno_champinones"><span>Champiñones<small>Plato: Pavo / Pavo relleno</small></span></label>
-            <label class="buy-item"><input type="checkbox" data-buy-id="pavo-relleno_pimiento-rojo"><span>Pimiento rojo<small>Plato: Pavo / Pavo relleno</small></span></label>
-            <label class="buy-item"><input type="checkbox" data-buy-id="pavo-relleno_caldo-de-carne"><span>Caldo de carne<small>Plato: Pavo / Pavo relleno</small></span></label>
-            <label class="buy-item"><input type="checkbox" data-buy-id="pavo-relleno_vino-blanco"><span>Vino blanco<small>Plato: Pavo / Pavo relleno</small></span></label>
-          </div>
-          <div class="buy-group"><div class="buy-group-title">Brécol</div>
-            <label class="buy-item"><input type="checkbox" data-buy-id="brocol_brocol"><span>Brécol<small>Plato: Brécol</small></span></label>
-          </div>
-          <div class="buy-group"><div class="buy-group-title">Crema Verduras</div>
-            <label class="buy-item"><input type="checkbox" data-buy-id="crema_puerro"><span>Puerro<small>Plato: Crema</small></span></label>
-            <label class="buy-item"><input type="checkbox" data-buy-id="crema_calabacin"><span>Calabacín<small>Plato: Crema</small></span></label>
-            <label class="buy-item"><input type="checkbox" data-buy-id="crema_calabaza"><span>Calabaza<small>Plato: Crema</small></span></label>
-            <label class="buy-item"><input type="checkbox" data-buy-id="crema_zanahorias"><span>Zanahorias<small>Plato: Crema</small></span></label>
-            <label class="buy-item"><input type="checkbox" data-buy-id="crema_nuez-moscada"><span>Nuez moscada<small>Plato: Crema</small></span></label>
-          </div>
-          <div class="buy-group"><div class="buy-group-title">Hamburguesas</div>
-            <label class="buy-item"><input type="checkbox" data-buy-id="hamburguesas_hamburguesas"><span>Hamburguesas<small>Plato: Hamburguesa</small></span></label>
-            <label class="buy-item"><input type="checkbox" data-buy-id="hamburguesas_lechuga"><span>Lechuga<small>Plato: Hamburguesa</small></span></label>
-            <label class="buy-item"><input type="checkbox" data-buy-id="hamburguesas_tomate"><span>Tomate<small>Plato: Hamburguesa</small></span></label>
-            <label class="buy-item"><input type="checkbox" data-buy-id="hamburguesas_queso"><span>Queso<small>Plato: Hamburguesa</small></span></label>
-          </div>
-          <div class="buy-group"><div class="buy-group-title">Lentejas</div>
-            <label class="buy-item"><input type="checkbox" data-buy-id="lentejas_lentejas"><span>Lentejas<small>Plato: Lentejas</small></span></label>
-            <label class="buy-item"><input type="checkbox" data-buy-id="lentejas_calabacin"><span>Calabacín<small>Plato: Lentejas</small></span></label>
-            <label class="buy-item"><input type="checkbox" data-buy-id="lentejas_zanahorias"><span>Zanahorias<small>Plato: Lentejas</small></span></label>
-            <label class="buy-item"><input type="checkbox" data-buy-id="lentejas_puerro"><span>Puerro<small>Plato: Lentejas</small></span></label>
-            <label class="buy-item"><input type="checkbox" data-buy-id="lentejas_pimenton"><span>Pimentón<small>Plato: Lentejas</small></span></label>
-          </div>
-          <div class="buy-group"><div class="buy-group-title">Espinacas garbanzos</div>
-            <label class="buy-item"><input type="checkbox" data-buy-id="garbazos_espinacas"><span>Espinacas<small>Plato: Garbazos</small></span></label>
-            <label class="buy-item"><input type="checkbox" data-buy-id="garbazos_garbanzos-cocidos"><span>Garbanzos cocidos<small>Plato: Garbazos</small></span></label>
-            <label class="buy-item"><input type="checkbox" data-buy-id="garbazos_salsa-de-tomate"><span>Salsa de tomate<small>Plato: Garbazos</small></span></label>
-            <label class="buy-item"><input type="checkbox" data-buy-id="garbazos_huevo"><span>Huevo<small>Plato: Garbazos</small></span></label>
-          </div>
-          <div class="buy-group"><div class="buy-group-title">Piadina Vikika</div>
-            <label class="buy-item"><input type="checkbox" data-buy-id="piadina_piadina"><span>Piadina<small>Plato: Piadinas</small></span></label>
-            <label class="buy-item"><input type="checkbox" data-buy-id="piadina_huevos-grandes"><span>Huevos grandes<small>Plato: Piadinas</small></span></label>
-            <label class="buy-item"><input type="checkbox" data-buy-id="piadina_yogur-griego"><span>Yogur griego<small>Plato: Piadinas</small></span></label>
-            <label class="buy-item"><input type="checkbox" data-buy-id="piadina_cherrys"><span>Cherrys<small>Plato: Piadinas</small></span></label>
-            <label class="buy-item"><input type="checkbox" data-buy-id="piadina_espinacas"><span>Espinacas<small>Plato: Piadinas</small></span></label>
-            <label class="buy-item"><input type="checkbox" data-buy-id="piadina_queso-rallado"><span>Queso rallado<small>Plato: Piadinas</small></span></label>
-            <label class="buy-item"><input type="checkbox" data-buy-id="piadina_pavo-en-taquitos"><span>Pavo en taquitos<small>Plato: Piadinas</small></span></label>
+
+          <div class="buy-group">
+            <div class="buy-group-title">Pan, wraps y varios</div>
+            <div class="buy-items">
+              <label class="buy-item"><input type="checkbox" data-buy-id="pan_boniato"><span>Boniato / batata</span></label>
+              <label class="buy-item"><input type="checkbox" data-buy-id="pan_sandwich"><span>Pan de sándwich</span></label>
+            </div>
           </div>
         </div>
       </div>
@@ -289,90 +298,56 @@
       <article class="day-card monday">
         <div class="day-head"><div class="day-name">Lunes</div><div class="day-date">13_04</div></div>
         <div class="meal-grid">
-          <div class="meal-block comida"><div class="meal-label">Comida</div><div class="meal-content">
-            <div class="dish"><a class="dish-link dish-main" href="Recipes/Filetes%20de%20ternera,%20pollo,%20solomillo%20o%20casta%C3%B1a.html"><span class="dish-name">Filetes</span><span class="dish-meta">Receta reconocida</span></a><a class="recipe-btn" href="Recipes/Filetes%20de%20ternera,%20pollo,%20solomillo%20o%20casta%C3%B1a.html">Receta</a></div>
-            <div class="dish"><span class="dish-main"><span class="dish-name">Judías</span><span class="dish-meta">Base Excel: Judías verdes</span></span></div>
-          </div></div>
-          <div class="meal-block cena"><div class="meal-label">Cena</div><div class="meal-content">
-            <div class="dish"><a class="dish-link dish-main" href="Recipes/Ensalada%20de%20salm%C3%B3n%20marinado.html"><span class="dish-name">Salmón</span><span class="dish-meta">Receta reconocida</span></a><a class="recipe-btn" href="Recipes/Ensalada%20de%20salm%C3%B3n%20marinado.html">Receta</a></div>
-            <div class="dish"><a class="dish-link dish-main" href="Recipes/Batata%20asada.html"><span class="dish-name">Boniato</span><span class="dish-meta">Receta reconocida</span></a><a class="recipe-btn" href="Recipes/Batata%20asada.html">Receta</a></div>
-          </div></div>
+          <div class="meal-block comida"><div class="meal-label">Comida</div><div class="meal-content"><div class="dish"><a class="dish-link dish-main" href="Recipes/Filetes%20de%20ternera,%20pollo,%20solomillo%20o%20casta%C3%B1a.html"><span class="dish-name">Filetes</span><span class="dish-meta">Receta</span></a><a class="recipe-btn" href="Recipes/Filetes%20de%20ternera,%20pollo,%20solomillo%20o%20casta%C3%B1a.html">Receta</a></div><div class="dish"><span class="dish-main"><span class="dish-name">Judías</span><span class="dish-meta">Base Excel</span></span></div></div></div>
+          <div class="meal-block cena"><div class="meal-label">Cena</div><div class="meal-content"><div class="dish"><a class="dish-link dish-main" href="Recipes/Ensalada%20de%20salm%C3%B3n%20marinado.html"><span class="dish-name">Salmón</span><span class="dish-meta">Receta</span></a><a class="recipe-btn" href="Recipes/Ensalada%20de%20salm%C3%B3n%20marinado.html">Receta</a></div><div class="dish"><a class="dish-link dish-main" href="Recipes/Batata%20asada.html"><span class="dish-name">Boniato</span><span class="dish-meta">Receta</span></a><a class="recipe-btn" href="Recipes/Batata%20asada.html">Receta</a></div></div></div>
         </div>
       </article>
 
       <article class="day-card tuesday">
         <div class="day-head"><div class="day-name">Martes</div><div class="day-date">14_04</div></div>
         <div class="meal-grid">
-          <div class="meal-block comida"><div class="meal-label">Comida</div><div class="meal-content">
-            <div class="dish"><a class="dish-link dish-main" href="Recipes/Rapantes.html"><span class="dish-name">Rapantes</span><span class="dish-meta">Receta reconocida</span></a><a class="recipe-btn" href="Recipes/Rapantes.html">Receta</a></div>
-            <div class="dish"><a class="dish-link dish-main" href="Recipes/Alcachofas.html"><span class="dish-name">Alcachofas</span><span class="dish-meta">Receta reconocida</span></a><a class="recipe-btn" href="Recipes/Alcachofas.html">Receta</a></div>
-          </div></div>
-          <div class="meal-block cena"><div class="meal-label">Cena</div><div class="meal-content">
-            <div class="dish"><a class="dish-link dish-main" href="Recipes/Pisto.html"><span class="dish-name">Pisto</span><span class="dish-meta">Receta reconocida</span></a><a class="recipe-btn" href="Recipes/Pisto.html">Receta</a></div>
-            <div class="dish"><span class="dish-main"><span class="dish-name">Pavo</span><span class="dish-meta">Base Excel: Pavo relleno</span></span></div>
-          </div></div>
+          <div class="meal-block comida"><div class="meal-label">Comida</div><div class="meal-content"><div class="dish"><a class="dish-link dish-main" href="Recipes/Rapantes.html"><span class="dish-name">Rapantes</span><span class="dish-meta">Receta</span></a><a class="recipe-btn" href="Recipes/Rapantes.html">Receta</a></div><div class="dish"><a class="dish-link dish-main" href="Recipes/Alcachofas.html"><span class="dish-name">Alcachofas</span><span class="dish-meta">Receta</span></a><a class="recipe-btn" href="Recipes/Alcachofas.html">Receta</a></div></div></div>
+          <div class="meal-block cena"><div class="meal-label">Cena</div><div class="meal-content"><div class="dish"><a class="dish-link dish-main" href="Recipes/Pisto.html"><span class="dish-name">Pisto</span><span class="dish-meta">Receta</span></a><a class="recipe-btn" href="Recipes/Pisto.html">Receta</a></div><div class="dish"><span class="dish-main"><span class="dish-name">Pavo</span><span class="dish-meta">Base Excel</span></span></div></div></div>
         </div>
       </article>
 
       <article class="day-card wednesday">
         <div class="day-head"><div class="day-name">Miércoles</div><div class="day-date">15_04</div></div>
         <div class="meal-grid">
-          <div class="meal-block comida"><div class="meal-label">Comida</div><div class="meal-content">
-            <div class="dish"><a class="dish-link dish-main" href="Recipes/Pescado%20al%20horno.html"><span class="dish-name">Pescado horno</span><span class="dish-meta">Receta reconocida</span></a><a class="recipe-btn" href="Recipes/Pescado%20al%20horno.html">Receta</a></div>
-            <div class="dish"><a class="dish-link dish-main" href="Recipes/Br%C3%A9col%20al%20vapor.html"><span class="dish-name">Brécol</span><span class="dish-meta">Receta reconocida</span></a><a class="recipe-btn" href="Recipes/Br%C3%A9col%20al%20vapor.html">Receta</a></div>
-          </div></div>
-          <div class="meal-block cena"><div class="meal-label">Cena</div><div class="meal-content">
-            <div class="dish"><a class="dish-link dish-main" href="Recipes/Crema%20Verduras.html"><span class="dish-name">Crema</span><span class="dish-meta">Base Excel: Crema Verduras</span></a><a class="recipe-btn" href="Recipes/Crema%20Verduras.html">Receta</a></div>
-            <div class="dish"><span class="dish-main"><span class="dish-name">Hamburguesa</span><span class="dish-meta">Base Excel: Hamburguesas</span></span></div>
-          </div></div>
+          <div class="meal-block comida"><div class="meal-label">Comida</div><div class="meal-content"><div class="dish"><a class="dish-link dish-main" href="Recipes/Pescado%20al%20horno.html"><span class="dish-name">Pescado horno</span><span class="dish-meta">Receta</span></a><a class="recipe-btn" href="Recipes/Pescado%20al%20horno.html">Receta</a></div><div class="dish"><a class="dish-link dish-main" href="Recipes/Br%C3%A9col%20al%20vapor.html"><span class="dish-name">Brécol</span><span class="dish-meta">Receta</span></a><a class="recipe-btn" href="Recipes/Br%C3%A9col%20al%20vapor.html">Receta</a></div></div></div>
+          <div class="meal-block cena"><div class="meal-label">Cena</div><div class="meal-content"><div class="dish"><a class="dish-link dish-main" href="Recipes/Crema%20Verduras.html"><span class="dish-name">Crema</span><span class="dish-meta">Base Excel</span></a><a class="recipe-btn" href="Recipes/Crema%20Verduras.html">Receta</a></div><div class="dish"><span class="dish-main"><span class="dish-name">Hamburguesa</span><span class="dish-meta">Base Excel</span></span></div></div></div>
         </div>
       </article>
 
       <article class="day-card thursday">
         <div class="day-head"><div class="day-name">Jueves</div><div class="day-date">16_04</div></div>
         <div class="meal-grid">
-          <div class="meal-block comida"><div class="meal-label">Comida</div><div class="meal-content">
-            <div class="dish"><a class="dish-link dish-main" href="Recipes/Lentejas%202..html"><span class="dish-name">Lentejas</span><span class="dish-meta">Base Excel + receta</span></a><a class="recipe-btn" href="Recipes/Lentejas%202..html">Receta</a></div>
-          </div></div>
-          <div class="meal-block cena"><div class="meal-label">Cena</div><div class="meal-content">
-            <div class="dish"><a class="dish-link dish-main" href="Recipes/Pavo%20relleno.html"><span class="dish-name">Pavo relleno</span><span class="dish-meta">Receta reconocida</span></a><a class="recipe-btn" href="Recipes/Pavo%20relleno.html">Receta</a></div>
-          </div></div>
+          <div class="meal-block comida"><div class="meal-label">Comida</div><div class="meal-content"><div class="dish"><a class="dish-link dish-main" href="Recipes/Lentejas%202..html"><span class="dish-name">Lentejas</span><span class="dish-meta">Base Excel + receta</span></a><a class="recipe-btn" href="Recipes/Lentejas%202..html">Receta</a></div></div></div>
+          <div class="meal-block cena"><div class="meal-label">Cena</div><div class="meal-content"><div class="dish"><a class="dish-link dish-main" href="Recipes/Pavo%20relleno.html"><span class="dish-name">Pavo relleno</span><span class="dish-meta">Receta</span></a><a class="recipe-btn" href="Recipes/Pavo%20relleno.html">Receta</a></div></div></div>
         </div>
       </article>
 
       <article class="day-card friday">
         <div class="day-head"><div class="day-name">Viernes</div><div class="day-date">17_04</div></div>
         <div class="meal-grid">
-          <div class="meal-block comida"><div class="meal-label">Comida</div><div class="meal-content">
-            <div class="dish"><a class="dish-link dish-main" href="Recipes/Carne%20gisada%20o%20pollo%20guisado.html"><span class="dish-name">Pollo guisado</span><span class="dish-meta">Receta reconocida</span></a><a class="recipe-btn" href="Recipes/Carne%20gisada%20o%20pollo%20guisado.html">Receta</a></div>
-          </div></div>
-          <div class="meal-block cena"><div class="meal-label">Cena</div><div class="meal-content">
-            <div class="dish"><span class="dish-main"><span class="dish-name">Garbazos</span><span class="dish-meta">Base Excel: Espinacas garbanzos</span></span></div>
-          </div></div>
+          <div class="meal-block comida"><div class="meal-label">Comida</div><div class="meal-content"><div class="dish"><a class="dish-link dish-main" href="Recipes/Carne%20gisada%20o%20pollo%20guisado.html"><span class="dish-name">Pollo guisado</span><span class="dish-meta">Receta</span></a><a class="recipe-btn" href="Recipes/Carne%20gisada%20o%20pollo%20guisado.html">Receta</a></div></div></div>
+          <div class="meal-block cena"><div class="meal-label">Cena</div><div class="meal-content"><div class="dish"><span class="dish-main"><span class="dish-name">Garbazos</span><span class="dish-meta">Base Excel</span></span></div></div></div>
         </div>
       </article>
 
       <article class="day-card saturday">
         <div class="day-head"><div class="day-name">Sábado</div><div class="day-date">18_04</div></div>
         <div class="meal-grid">
-          <div class="meal-block comida"><div class="meal-label">Comida</div><div class="meal-content">
-            <div class="dish"><a class="dish-link dish-main" href="Recipes/Pavo%20relleno.html"><span class="dish-name">Pavo relleno</span><span class="dish-meta">Receta reconocida</span></a><a class="recipe-btn" href="Recipes/Pavo%20relleno.html">Receta</a></div>
-          </div></div>
-          <div class="meal-block cena"><div class="meal-label">Cena</div><div class="meal-content">
-            <div class="dish"><a class="dish-link dish-main" href="Recipes/Piadina%20Vikika.html"><span class="dish-name">Piadinas</span><span class="dish-meta">Base Excel: Piadina Vikika</span></a><a class="recipe-btn" href="Recipes/Piadina%20Vikika.html">Receta</a></div>
-          </div></div>
+          <div class="meal-block comida"><div class="meal-label">Comida</div><div class="meal-content"><div class="dish"><a class="dish-link dish-main" href="Recipes/Pavo%20relleno.html"><span class="dish-name">Pavo relleno</span><span class="dish-meta">Receta</span></a><a class="recipe-btn" href="Recipes/Pavo%20relleno.html">Receta</a></div></div></div>
+          <div class="meal-block cena"><div class="meal-label">Cena</div><div class="meal-content"><div class="dish"><a class="dish-link dish-main" href="Recipes/Piadina%20Vikika.html"><span class="dish-name">Piadinas</span><span class="dish-meta">Base Excel</span></a><a class="recipe-btn" href="Recipes/Piadina%20Vikika.html">Receta</a></div></div></div>
         </div>
       </article>
 
       <article class="day-card sunday">
         <div class="day-head"><div class="day-name">Domingo</div><div class="day-date">19_04</div></div>
         <div class="meal-grid">
-          <div class="meal-block comida"><div class="meal-label">Comida</div><div class="meal-content">
-            <div class="dish"><span class="dish-main"><span class="dish-name">Herville</span><span class="dish-meta">Sin asociación automática todavía</span></span></div>
-          </div></div>
-          <div class="meal-block cena"><div class="meal-label">Cena</div><div class="meal-content">
-            <div class="dish"><a class="dish-link dish-main" href="Recipes/Sandwich%20de%20langostinos%20gabardina.html"><span class="dish-name">Sándwich</span><span class="dish-meta">Receta reconocida</span></a><a class="recipe-btn" href="Recipes/Sandwich%20de%20langostinos%20gabardina.html">Receta</a></div>
-          </div></div>
+          <div class="meal-block comida"><div class="meal-label">Comida</div><div class="meal-content"><div class="dish"><span class="dish-main"><span class="dish-name">Herville</span><span class="dish-meta">Sin asociación automática todavía</span></span></div></div></div>
+          <div class="meal-block cena"><div class="meal-label">Cena</div><div class="meal-content"><div class="dish"><a class="dish-link dish-main" href="Recipes/Sandwich%20de%20langostinos%20gabardina.html"><span class="dish-name">Sándwich</span><span class="dish-meta">Receta</span></a><a class="recipe-btn" href="Recipes/Sandwich%20de%20langostinos%20gabardina.html">Receta</a></div></div></div>
         </div>
       </article>
     </section>
@@ -421,11 +396,11 @@
       </div>
     </section>
 
-    <div class="footer">Actualizado con integración mejorada de recetas + ingredientes y lista de la compra con checks persistentes</div>
+    <div class="footer">Actualizado con compra por departamentos y vista más compacta</div>
   </main>
 
   <script>
-    const STORAGE_KEY = 'comidas_buy_checks_v1';
+    const STORAGE_KEY = 'comidas_buy_checks_v2';
     const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
     document.querySelectorAll('[data-buy-id]').forEach(input => {
       const id = input.getAttribute('data-buy-id');

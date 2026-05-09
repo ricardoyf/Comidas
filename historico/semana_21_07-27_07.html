@@ -1,1 +1,104 @@
-<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Semana 21_07-27_07</title><style>:root{--bg:#f4f7fb;--card:#fff;--text:#16202a;--muted:#5f6b76;--accent:#0b57d0;--line:#e5e7eb;--shadow:0 8px 24px rgba(0,0,0,.06)}*{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Arial,sans-serif;background:var(--bg);color:var(--text)}.wrap{max-width:640px;margin:0 auto;padding:18px 14px 28px}.hero{margin-bottom:14px;padding:18px;border-radius:18px;background:linear-gradient(135deg,#0b57d0,#3b82f6);color:#fff;box-shadow:var(--shadow)}.hero h1{margin:0;font-size:28px;line-height:1.1}.hero p{margin:8px 0 0;opacity:.92;font-size:14px}.nav{margin-top:10px}.nav a{color:#fff}.day-card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px;margin-bottom:14px;box-shadow:var(--shadow)}.day-title{font-size:22px;font-weight:800;margin-bottom:12px;color:var(--accent)}.meal-block + .meal-block{margin-top:14px;padding-top:14px;border-top:1px solid var(--line)}.meal-label{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:8px}.dish{background:#f8fafc;border:1px solid #e6eefc;border-radius:12px;padding:12px 14px;font-size:17px;line-height:1.35;font-weight:600}</style></head><body><main class="wrap"><header class="hero"><h1>Semana 21/07 - 27/07</h1><p>Histórico extraído del ICS</p><div class="nav"><a href="../index.html">← Volver</a></div></header><section class="day-card"><div class="day-title">Lunes 21/07</div><div class="meal-block"><div class="meal-label">Comida</div><div class="meal-content"><div class="dish">Pollo con patatas</div></div></div><div class="meal-block"><div class="meal-label">Cena</div><div class="meal-content"><div class="dish">Tortilla ensalada</div></div></div></section><section class="day-card"><div class="day-title">Martes 22/07</div><div class="meal-block"><div class="meal-label">Comida</div><div class="meal-content"><div class="dish">Merluza plancha judías</div></div></div><div class="meal-block"><div class="meal-label">Cena</div><div class="meal-content"><div class="dish">Empanada pollo</div></div></div></section><section class="day-card"><div class="day-title">Miércoles 23/07</div><div class="meal-block"><div class="meal-label">Comida</div><div class="meal-content"><div class="dish">Pescado</div></div></div><div class="meal-block"><div class="meal-label">Cena</div><div class="meal-content"><div class="dish">Cuscús judías huevo / niños pasta</div></div></div></section><section class="day-card"><div class="day-title">Jueves 24/07</div><div class="meal-block"><div class="meal-label">Comida</div><div class="meal-content"><div class="dish">Lentejas congeladas niños albóndigas</div></div></div><div class="meal-block"><div class="meal-label">Cena</div><div class="meal-content"><div class="dish">Crema ensaladas huevos cocidos</div></div></div></section><section class="day-card"><div class="day-title">Viernes 25/07</div><div class="meal-block"><div class="meal-label">Comida</div><div class="meal-content"><div class="dish">Salmón boniato</div></div></div><div class="meal-block"><div class="meal-label">Cena</div><div class="meal-content"><div class="dish">Pasta horno</div></div></div></section><section class="day-card"><div class="day-title">Sábado 26/07</div><div class="meal-block"><div class="meal-label">Comida</div><div class="meal-content"><div class="dish">—</div></div></div><div class="meal-block"><div class="meal-label">Cena</div><div class="meal-content"><div class="dish">CENAR CASA</div></div></div></section><section class="day-card"><div class="day-title">Domingo 27/07</div><div class="meal-block"><div class="meal-label">Comida</div><div class="meal-content"><div class="dish">COMEMOS CASA</div></div></div><div class="meal-block"><div class="meal-label">Cena</div><div class="meal-content"><div class="dish">CENA ALBUFEIRA</div></div></div></section></main></body></html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Semana 21/07/2025 - 27/07/2025</title>
+  <style>
+    :root {
+      --bg: #f6f7fb;
+      --card: #ffffff;
+      --text: #17212b;
+      --muted: #66727f;
+      --line: #e6ebf2;
+      --shadow: 0 12px 28px rgba(23, 33, 43, 0.08);
+      --hero1: #2563eb;
+      --hero2: #7c3aed;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Arial, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(37,99,235,.08), transparent 30%),
+        radial-gradient(circle at top right, rgba(124,58,237,.08), transparent 28%),
+        var(--bg);
+      color: var(--text);
+    }
+    .wrap { max-width: 860px; margin: 0 auto; padding: 14px 12px 24px; }
+    .hero, .compact-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+    }
+    .hero {
+      margin-bottom: 12px;
+      padding: 18px 16px;
+      background: linear-gradient(135deg, var(--hero1), var(--hero2));
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: -30px;
+      bottom: -55px;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.10);
+    }
+    .hero h1 { margin: 0; font-size: 28px; line-height: 1.02; position: relative; z-index: 1; }
+    .hero p { margin: 7px 0 0; font-size: 13px; line-height: 1.4; opacity: .95; max-width: 640px; position: relative; z-index: 1; }
+    .hero a { color: white; font-weight: 800; text-decoration: none; }
+    .hero a:hover { text-decoration: underline; }
+    .top-grid { display:grid; grid-template-columns:1fr; gap:12px; margin-bottom:12px; }
+    .compact-card { padding: 14px; }
+    .eyebrow { font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 800; margin-bottom: 7px; }
+    .week-range { font-size: 24px; font-weight: 900; color: #1d4ed8; line-height: 1.15; }
+    .summary-note { margin-top: 7px; font-size: 13px; color: var(--muted); line-height: 1.45; }
+    .compact-line { font-size: 15px; font-weight: 800; line-height: 1.45; padding: 7px 0; border-bottom: 1px dashed #e5e7eb; }
+    .compact-line:last-child { border-bottom: 0; }
+    .compact-prefix { display:inline-block; min-width: 64px; color:#1d4ed8; }
+    .compact-text { color: var(--text); }
+    .footer { text-align:center; color:var(--muted); font-size:11px; margin-top:10px; }
+    @media (min-width: 860px) {
+      .top-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 520px) {
+      .compact-line { font-size: 14px; }
+      .compact-prefix { min-width: 58px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header class="hero">
+      <h1>Semana histórica</h1>
+      <p>21/07/2025 - 27/07/2025<br><a href="../index.html">← Volver</a></p>
+    </header>
+
+    <section class="top-grid">
+      <article class="compact-card">
+        <div class="eyebrow">Semana</div>
+        <div class="week-range">21/07/2025 - 27/07/2025</div>
+        <div class="summary-note">Vista compacta para revisar la semana completa de un golpe en móvil.</div>
+      </article>
+      <article class="compact-card">
+        <div class="eyebrow">Resumen compacto</div>
+        <div class="compact-line"><span class="compact-prefix">L21/07</span> <span class="compact-text">Pollo con patatas / Tortilla ensalada</span></div>
+        <div class="compact-line"><span class="compact-prefix">M22/07</span> <span class="compact-text">Merluza plancha judías / Empanada pollo</span></div>
+        <div class="compact-line"><span class="compact-prefix">X23/07</span> <span class="compact-text">Pescado / Cuscús judías huevo / niños pasta</span></div>
+        <div class="compact-line"><span class="compact-prefix">J24/07</span> <span class="compact-text">Lentejas congeladas niños albóndigas / Crema ensaladas huevos cocidos</span></div>
+        <div class="compact-line"><span class="compact-prefix">V25/07</span> <span class="compact-text">Salmón boniato / Pasta horno</span></div>
+        <div class="compact-line"><span class="compact-prefix">S26/07</span> <span class="compact-text">— / CENAR CASA</span></div>
+        <div class="compact-line"><span class="compact-prefix">D27/07</span> <span class="compact-text">COMEMOS CASA / CENA ALBUFEIRA</span></div>
+      </article>
+    </section>
+
+    <div class="footer">Histórico en formato compacto</div>
+  </main>
+</body>
+</html>

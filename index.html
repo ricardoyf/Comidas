@@ -38,7 +38,7 @@
       color: var(--text);
     }
     .wrap { max-width: 860px; margin: 0 auto; padding: 14px 12px 24px; }
-    .hero, .buy-card, .compact-card, .history-card, .day-card {
+    .hero, .buy-card, .compact-card, .history-card {
       background: var(--card);
       border: 1px solid var(--line);
       border-radius: 20px;
@@ -104,60 +104,6 @@
     .buy-item input { transform: scale(1.1); }
     .buy-item.checked span { text-decoration: line-through; color: #7b8794; }
 
-    .days { display:grid; grid-template-columns:1fr; gap:10px; margin-bottom:12px; }
-    .day-card { padding: 12px; border-top: 5px solid transparent; }
-    .monday { background: linear-gradient(180deg, var(--monday), #fff); border-top-color: var(--monday-accent); }
-    .tuesday { background: linear-gradient(180deg, var(--tuesday), #fff); border-top-color: var(--tuesday-accent); }
-    .wednesday { background: linear-gradient(180deg, var(--wednesday), #fff); border-top-color: var(--wednesday-accent); }
-    .thursday { background: linear-gradient(180deg, var(--thursday), #fff); border-top-color: var(--thursday-accent); }
-    .friday { background: linear-gradient(180deg, var(--friday), #fff); border-top-color: var(--friday-accent); }
-    .saturday { background: linear-gradient(180deg, var(--saturday), #fff); border-top-color: var(--saturday-accent); }
-    .sunday { background: linear-gradient(180deg, var(--sunday), #fff); border-top-color: var(--sunday-accent); }
-
-    .day-head { display:flex; justify-content:space-between; align-items:baseline; gap:8px; margin-bottom:8px; flex-wrap:wrap; }
-    .day-name { font-size: 20px; font-weight: 900; }
-    .day-date { font-size: 14px; font-weight: 800; color: var(--muted); background: rgba(255,255,255,.8); padding: 4px 9px; border-radius: 999px; border: 1px solid rgba(0,0,0,.05); }
-    .meal-grid { display:grid; grid-template-columns:1fr 1fr; gap:8px; }
-    .meal-block { border-radius: 14px; padding: 9px; border: 1px solid rgba(0,0,0,.05); background: rgba(255,255,255,.84); }
-    .meal-block.comida { box-shadow: inset 0 0 0 999px rgba(219,234,254,.38); }
-    .meal-block.cena { box-shadow: inset 0 0 0 999px rgba(237,233,254,.5); }
-    .meal-label { font-size: 10px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 800; margin-bottom: 7px; }
-    .meal-content { display:flex; flex-direction:column; gap:6px; }
-    .dish {
-      background: rgba(255,255,255,.9);
-      border: 1px solid rgba(0,0,0,.06);
-      border-radius: 12px;
-      padding: 8px 9px;
-      font-size: 14px;
-      line-height: 1.25;
-      font-weight: 800;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:8px;
-    }
-    .dish-main { min-width:0; flex:1; }
-    .dish-name { display:block; }
-    .dish-meta { display:block; margin-top:2px; font-size:10px; color:var(--muted); font-weight:700; }
-    .dish-link { color: inherit; text-decoration: none; }
-    .dish-link:hover { text-decoration: underline; }
-    .recipe-btn {
-      flex: 0 0 auto;
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      min-width:38px;
-      height:30px;
-      padding:0 9px;
-      border-radius:9px;
-      border:1px solid #d6e4ff;
-      background:#eef4ff;
-      color:#0b57d0;
-      text-decoration:none;
-      font-size:11px;
-      font-weight:800;
-    }
-
     .history-card .links { display:grid; grid-template-columns:1fr; gap:7px; }
     .history-link {
       display:block;
@@ -175,13 +121,10 @@
 
     @media (min-width: 860px) {
       .top-grid { grid-template-columns: 1fr 1fr; }
-      .days { grid-template-columns: 1fr 1fr; }
       .buy-groups { grid-template-columns: 1fr 1fr; }
       .buy-items { grid-template-columns: 1fr 1fr; column-gap: 12px; }
     }
     @media (max-width: 520px) {
-      .meal-grid { grid-template-columns: 1fr; }
-      .day-name { font-size: 18px; }
       .compact-line { font-size: 14px; }
     }
   </style>
@@ -190,14 +133,14 @@
   <main class="wrap">
     <header class="hero">
       <h1>Plan semanal</h1>
-      <p>Vista compacta, más visual y práctica: semana completa, recetas cuando existen y compra ordenada por departamentos de supermercado.</p>
+      <p>Vista compacta de la semana y compra ordenada por departamentos, pensada para revisar todo rápido desde el móvil.</p>
     </header>
 
     <section class="top-grid">
       <article class="compact-card">
         <div class="eyebrow">Semana actual</div>
-        <div class="week-range">13/04 - 19/04</div>
-        <div class="summary-note">Formato activo: día + fecha visible, vista rápida y lista de compra compacta pensada para móvil grande.</div>
+        <div class="week-range">13/04/2026 - 19/04/2026</div>
+        <div class="summary-note">Semana actual en formato compacto: un golpe de vista arriba y la compra debajo.</div>
       </article>
       <article class="compact-card">
         <div class="eyebrow">Resumen compacto</div>
@@ -294,109 +237,86 @@
       </div>
     </details>
 
-    <section class="days">
-      <article class="day-card monday">
-        <div class="day-head"><div class="day-name">Lunes</div><div class="day-date">13_04</div></div>
-        <div class="meal-grid">
-          <div class="meal-block comida"><div class="meal-label">Comida</div><div class="meal-content"><div class="dish"><a class="dish-link dish-main" href="Recipes/Filetes%20de%20ternera,%20pollo,%20solomillo%20o%20casta%C3%B1a.html"><span class="dish-name">Filetes</span><span class="dish-meta">Receta</span></a><a class="recipe-btn" href="Recipes/Filetes%20de%20ternera,%20pollo,%20solomillo%20o%20casta%C3%B1a.html">Receta</a></div><div class="dish"><span class="dish-main"><span class="dish-name">Judías</span><span class="dish-meta">Base Excel</span></span></div></div></div>
-          <div class="meal-block cena"><div class="meal-label">Cena</div><div class="meal-content"><div class="dish"><a class="dish-link dish-main" href="Recipes/Ensalada%20de%20salm%C3%B3n%20marinado.html"><span class="dish-name">Salmón</span><span class="dish-meta">Receta</span></a><a class="recipe-btn" href="Recipes/Ensalada%20de%20salm%C3%B3n%20marinado.html">Receta</a></div><div class="dish"><a class="dish-link dish-main" href="Recipes/Batata%20asada.html"><span class="dish-name">Boniato</span><span class="dish-meta">Receta</span></a><a class="recipe-btn" href="Recipes/Batata%20asada.html">Receta</a></div></div></div>
-        </div>
-      </article>
-
-      <article class="day-card tuesday">
-        <div class="day-head"><div class="day-name">Martes</div><div class="day-date">14_04</div></div>
-        <div class="meal-grid">
-          <div class="meal-block comida"><div class="meal-label">Comida</div><div class="meal-content"><div class="dish"><a class="dish-link dish-main" href="Recipes/Rapantes.html"><span class="dish-name">Rapantes</span><span class="dish-meta">Receta</span></a><a class="recipe-btn" href="Recipes/Rapantes.html">Receta</a></div><div class="dish"><a class="dish-link dish-main" href="Recipes/Alcachofas.html"><span class="dish-name">Alcachofas</span><span class="dish-meta">Receta</span></a><a class="recipe-btn" href="Recipes/Alcachofas.html">Receta</a></div></div></div>
-          <div class="meal-block cena"><div class="meal-label">Cena</div><div class="meal-content"><div class="dish"><a class="dish-link dish-main" href="Recipes/Pisto.html"><span class="dish-name">Pisto</span><span class="dish-meta">Receta</span></a><a class="recipe-btn" href="Recipes/Pisto.html">Receta</a></div><div class="dish"><span class="dish-main"><span class="dish-name">Pavo</span><span class="dish-meta">Base Excel</span></span></div></div></div>
-        </div>
-      </article>
-
-      <article class="day-card wednesday">
-        <div class="day-head"><div class="day-name">Miércoles</div><div class="day-date">15_04</div></div>
-        <div class="meal-grid">
-          <div class="meal-block comida"><div class="meal-label">Comida</div><div class="meal-content"><div class="dish"><a class="dish-link dish-main" href="Recipes/Pescado%20al%20horno.html"><span class="dish-name">Pescado horno</span><span class="dish-meta">Receta</span></a><a class="recipe-btn" href="Recipes/Pescado%20al%20horno.html">Receta</a></div><div class="dish"><a class="dish-link dish-main" href="Recipes/Br%C3%A9col%20al%20vapor.html"><span class="dish-name">Brécol</span><span class="dish-meta">Receta</span></a><a class="recipe-btn" href="Recipes/Br%C3%A9col%20al%20vapor.html">Receta</a></div></div></div>
-          <div class="meal-block cena"><div class="meal-label">Cena</div><div class="meal-content"><div class="dish"><a class="dish-link dish-main" href="Recipes/Crema%20Verduras.html"><span class="dish-name">Crema</span><span class="dish-meta">Base Excel</span></a><a class="recipe-btn" href="Recipes/Crema%20Verduras.html">Receta</a></div><div class="dish"><span class="dish-main"><span class="dish-name">Hamburguesa</span><span class="dish-meta">Base Excel</span></span></div></div></div>
-        </div>
-      </article>
-
-      <article class="day-card thursday">
-        <div class="day-head"><div class="day-name">Jueves</div><div class="day-date">16_04</div></div>
-        <div class="meal-grid">
-          <div class="meal-block comida"><div class="meal-label">Comida</div><div class="meal-content"><div class="dish"><a class="dish-link dish-main" href="Recipes/Lentejas%202..html"><span class="dish-name">Lentejas</span><span class="dish-meta">Base Excel + receta</span></a><a class="recipe-btn" href="Recipes/Lentejas%202..html">Receta</a></div></div></div>
-          <div class="meal-block cena"><div class="meal-label">Cena</div><div class="meal-content"><div class="dish"><a class="dish-link dish-main" href="Recipes/Pavo%20relleno.html"><span class="dish-name">Pavo relleno</span><span class="dish-meta">Receta</span></a><a class="recipe-btn" href="Recipes/Pavo%20relleno.html">Receta</a></div></div></div>
-        </div>
-      </article>
-
-      <article class="day-card friday">
-        <div class="day-head"><div class="day-name">Viernes</div><div class="day-date">17_04</div></div>
-        <div class="meal-grid">
-          <div class="meal-block comida"><div class="meal-label">Comida</div><div class="meal-content"><div class="dish"><a class="dish-link dish-main" href="Recipes/Carne%20gisada%20o%20pollo%20guisado.html"><span class="dish-name">Pollo guisado</span><span class="dish-meta">Receta</span></a><a class="recipe-btn" href="Recipes/Carne%20gisada%20o%20pollo%20guisado.html">Receta</a></div></div></div>
-          <div class="meal-block cena"><div class="meal-label">Cena</div><div class="meal-content"><div class="dish"><span class="dish-main"><span class="dish-name">Garbazos</span><span class="dish-meta">Base Excel</span></span></div></div></div>
-        </div>
-      </article>
-
-      <article class="day-card saturday">
-        <div class="day-head"><div class="day-name">Sábado</div><div class="day-date">18_04</div></div>
-        <div class="meal-grid">
-          <div class="meal-block comida"><div class="meal-label">Comida</div><div class="meal-content"><div class="dish"><a class="dish-link dish-main" href="Recipes/Pavo%20relleno.html"><span class="dish-name">Pavo relleno</span><span class="dish-meta">Receta</span></a><a class="recipe-btn" href="Recipes/Pavo%20relleno.html">Receta</a></div></div></div>
-          <div class="meal-block cena"><div class="meal-label">Cena</div><div class="meal-content"><div class="dish"><a class="dish-link dish-main" href="Recipes/Piadina%20Vikika.html"><span class="dish-name">Piadinas</span><span class="dish-meta">Base Excel</span></a><a class="recipe-btn" href="Recipes/Piadina%20Vikika.html">Receta</a></div></div></div>
-        </div>
-      </article>
-
-      <article class="day-card sunday">
-        <div class="day-head"><div class="day-name">Domingo</div><div class="day-date">19_04</div></div>
-        <div class="meal-grid">
-          <div class="meal-block comida"><div class="meal-label">Comida</div><div class="meal-content"><div class="dish"><span class="dish-main"><span class="dish-name">Herville</span><span class="dish-meta">Sin asociación automática todavía</span></span></div></div></div>
-          <div class="meal-block cena"><div class="meal-label">Cena</div><div class="meal-content"><div class="dish"><a class="dish-link dish-main" href="Recipes/Sandwich%20de%20langostinos%20gabardina.html"><span class="dish-name">Sándwich</span><span class="dish-meta">Receta</span></a><a class="recipe-btn" href="Recipes/Sandwich%20de%20langostinos%20gabardina.html">Receta</a></div></div></div>
-        </div>
-      </article>
-    </section>
-
     <section class="history-card">
       <div class="eyebrow">Histórico</div>
       <div class="links">
-        <a class="history-link" href="historico/semana_16_02-22_02.html">Semana 16/02 - 22/02</a>
-        <a class="history-link" href="historico/semana_09_02-15_02.html">Semana 09/02 - 15/02</a>
-        <a class="history-link" href="historico/semana_02_02-08_02.html">Semana 02/02 - 08/02</a>
-        <a class="history-link" href="historico/semana_26_01-01_02.html">Semana 26/01 - 01/02</a>
-        <a class="history-link" href="historico/semana_19_01-25_01.html">Semana 19/01 - 25/01</a>
-        <a class="history-link" href="historico/semana_12_01-18_01.html">Semana 12/01 - 18/01</a>
-        <a class="history-link" href="historico/semana_05_01-11_01.html">Semana 05/01 - 11/01</a>
-        <a class="history-link" href="historico/semana_29_12-04_01.html">Semana 29/12 - 04/01</a>
-        <a class="history-link" href="historico/semana_22_12-28_12.html">Semana 22/12 - 28/12</a>
-        <a class="history-link" href="historico/semana_15_12-21_12.html">Semana 15/12 - 21/12</a>
-        <a class="history-link" href="historico/semana_08_12-14_12.html">Semana 08/12 - 14/12</a>
-        <a class="history-link" href="historico/semana_01_12-07_12.html">Semana 01/12 - 07/12</a>
-        <a class="history-link" href="historico/semana_24_11-30_11.html">Semana 24/11 - 30/11</a>
-        <a class="history-link" href="historico/semana_17_11-23_11.html">Semana 17/11 - 23/11</a>
-        <a class="history-link" href="historico/semana_10_11-16_11.html">Semana 10/11 - 16/11</a>
-        <a class="history-link" href="historico/semana_03_11-09_11.html">Semana 03/11 - 09/11</a>
-        <a class="history-link" href="historico/semana_27_10-02_11.html">Semana 27/10 - 02/11</a>
-        <a class="history-link" href="historico/semana_20_10-26_10.html">Semana 20/10 - 26/10</a>
-        <a class="history-link" href="historico/semana_13_10-19_10.html">Semana 13/10 - 19/10</a>
-        <a class="history-link" href="historico/semana_06_10-12_10.html">Semana 06/10 - 12/10</a>
-        <a class="history-link" href="historico/semana_29_09-05_10.html">Semana 29/09 - 05/10</a>
-        <a class="history-link" href="historico/semana_22_09-28_09.html">Semana 22/09 - 28/09</a>
-        <a class="history-link" href="historico/semana_15_09-21_09.html">Semana 15/09 - 21/09</a>
-        <a class="history-link" href="historico/semana_08_09-14_09.html">Semana 08/09 - 14/09</a>
-        <a class="history-link" href="historico/semana_01_09-07_09.html">Semana 01/09 - 07/09</a>
-        <a class="history-link" href="historico/semana_25_08-31_08.html">Semana 25/08 - 31/08</a>
-        <a class="history-link" href="historico/semana_18_08-24_08.html">Semana 18/08 - 24/08</a>
-        <a class="history-link" href="historico/semana_11_08-17_08.html">Semana 11/08 - 17/08</a>
-        <a class="history-link" href="historico/semana_04_08-10_08.html">Semana 04/08 - 10/08</a>
-        <a class="history-link" href="historico/semana_28_07-03_08.html">Semana 28/07 - 03/08</a>
-        <a class="history-link" href="historico/semana_21_07-27_07.html">Semana 21/07 - 27/07</a>
-        <a class="history-link" href="historico/semana_14_07-20_07.html">Semana 14/07 - 20/07</a>
-        <a class="history-link" href="historico/semana_07_07-13_07.html">Semana 07/07 - 13/07</a>
-        <a class="history-link" href="historico/semana_30_06-06_07.html">Semana 30/06 - 06/07</a>
-        <a class="history-link" href="historico/semana_23_06-29_06.html">Semana 23/06 - 29/06</a>
-        <a class="history-link" href="historico/semana_16_06-22_06.html">Semana 16/06 - 22/06</a>
-        <a class="history-link" href="historico/semana_09_06-15_06.html">Semana 09/06 - 15/06</a>
-        <a class="history-link" href="historico/semana_02_06-08_06.html">Semana 02/06 - 08/06</a>
+        <a class="history-link" href="historico/semana_16_02-22_02.html">Semana 16/02/2026 - 22/02/2026</a>
+        <a class="history-link" href="historico/semana_09_02-15_02.html">Semana 09/02/2026 - 15/02/2026</a>
+        <a class="history-link" href="historico/semana_02_02-08_02.html">Semana 02/02/2026 - 08/02/2026</a>
+        <a class="history-link" href="historico/semana_26_01-01_02.html">Semana 26/01/2026 - 01/02/2026</a>
+        <a class="history-link" href="historico/semana_19_01-25_01.html">Semana 19/01/2026 - 25/01/2026</a>
+        <a class="history-link" href="historico/semana_12_01-18_01.html">Semana 12/01/2026 - 18/01/2026</a>
+        <a class="history-link" href="historico/semana_05_01-11_01.html">Semana 05/01/2026 - 11/01/2026</a>
+        <a class="history-link" href="historico/semana_29_12-04_01.html">Semana 29/12/2025 - 04/01/2026</a>
+        <a class="history-link" href="historico/semana_22_12-28_12.html">Semana 22/12/2025 - 28/12/2025</a>
+        <a class="history-link" href="historico/semana_15_12-21_12.html">Semana 15/12/2025 - 21/12/2025</a>
+        <a class="history-link" href="historico/semana_08_12-14_12.html">Semana 08/12/2025 - 14/12/2025</a>
+        <a class="history-link" href="historico/semana_01_12-07_12.html">Semana 01/12/2025 - 07/12/2025</a>
+        <a class="history-link" href="historico/semana_24_11-30_11.html">Semana 24/11/2025 - 30/11/2025</a>
+        <a class="history-link" href="historico/semana_17_11-23_11.html">Semana 17/11/2025 - 23/11/2025</a>
+        <a class="history-link" href="historico/semana_10_11-16_11.html">Semana 10/11/2025 - 16/11/2025</a>
+        <a class="history-link" href="historico/semana_03_11-09_11.html">Semana 03/11/2025 - 09/11/2025</a>
+        <a class="history-link" href="historico/semana_27_10-02_11.html">Semana 27/10/2025 - 02/11/2025</a>
+        <a class="history-link" href="historico/semana_20_10-26_10.html">Semana 20/10/2025 - 26/10/2025</a>
+        <a class="history-link" href="historico/semana_13_10-19_10.html">Semana 13/10/2025 - 19/10/2025</a>
+        <a class="history-link" href="historico/semana_06_10-12_10.html">Semana 06/10/2025 - 12/10/2025</a>
+        <a class="history-link" href="historico/semana_29_09-05_10.html">Semana 29/09/2025 - 05/10/2025</a>
+        <a class="history-link" href="historico/semana_22_09-28_09.html">Semana 22/09/2025 - 28/09/2025</a>
+        <a class="history-link" href="historico/semana_15_09-21_09.html">Semana 15/09/2025 - 21/09/2025</a>
+        <a class="history-link" href="historico/semana_08_09-14_09.html">Semana 08/09/2025 - 14/09/2025</a>
+        <a class="history-link" href="historico/semana_01_09-07_09.html">Semana 01/09/2025 - 07/09/2025</a>
+        <a class="history-link" href="historico/semana_25_08-31_08.html">Semana 25/08/2025 - 31/08/2025</a>
+        <a class="history-link" href="historico/semana_18_08-24_08.html">Semana 18/08/2025 - 24/08/2025</a>
+        <a class="history-link" href="historico/semana_11_08-17_08.html">Semana 11/08/2025 - 17/08/2025</a>
+        <a class="history-link" href="historico/semana_04_08-10_08.html">Semana 04/08/2025 - 10/08/2025</a>
+        <a class="history-link" href="historico/semana_28_07-03_08.html">Semana 28/07/2025 - 03/08/2025</a>
+        <a class="history-link" href="historico/semana_21_07-27_07.html">Semana 21/07/2025 - 27/07/2025</a>
+        <a class="history-link" href="historico/semana_14_07-20_07.html">Semana 14/07/2025 - 20/07/2025</a>
+        <a class="history-link" href="historico/semana_07_07-13_07.html">Semana 07/07/2025 - 13/07/2025</a>
+        <a class="history-link" href="historico/semana_30_06-06_07.html">Semana 30/06/2025 - 06/07/2025</a>
+        <a class="history-link" href="historico/semana_23_06-29_06.html">Semana 23/06/2025 - 29/06/2025</a>
+        <a class="history-link" href="historico/semana_16_06-22_06.html">Semana 16/06/2025 - 22/06/2025</a>
+        <a class="history-link" href="historico/semana_09_06-15_06.html">Semana 09/06/2025 - 15/06/2025</a>
+        <a class="history-link" href="historico/semana_02_06-08_06.html">Semana 02/06/2025 - 08/06/2025</a>
+        <a class="history-link" href="historico/semana_26_05-01_06.html">Semana 26/05/2025 - 01/06/2025</a>
+        <a class="history-link" href="historico/semana_19_05-25_05.html">Semana 19/05/2025 - 25/05/2025</a>
+        <a class="history-link" href="historico/semana_12_05-18_05.html">Semana 12/05/2025 - 18/05/2025</a>
+        <a class="history-link" href="historico/semana_05_05-11_05.html">Semana 05/05/2025 - 11/05/2025</a>
+        <a class="history-link" href="historico/semana_28_04-04_05.html">Semana 28/04/2025 - 04/05/2025</a>
+        <a class="history-link" href="historico/semana_21_04-27_04.html">Semana 21/04/2025 - 27/04/2025</a>
+        <a class="history-link" href="historico/semana_14_04-20_04.html">Semana 14/04/2025 - 20/04/2025</a>
+        <a class="history-link" href="historico/semana_07_04-13_04.html">Semana 07/04/2025 - 13/04/2025</a>
+        <a class="history-link" href="historico/semana_31_03-06_04.html">Semana 31/03/2025 - 06/04/2025</a>
+        <a class="history-link" href="historico/semana_24_03-30_03.html">Semana 24/03/2025 - 30/03/2025</a>
+        <a class="history-link" href="historico/semana_17_03-23_03.html">Semana 17/03/2025 - 23/03/2025</a>
+        <a class="history-link" href="historico/semana_10_03-16_03.html">Semana 10/03/2025 - 16/03/2025</a>
+        <a class="history-link" href="historico/semana_03_03-09_03.html">Semana 03/03/2025 - 09/03/2025</a>
+        <a class="history-link" href="historico/semana_24_02-02_03.html">Semana 24/02/2025 - 02/03/2025</a>
+        <a class="history-link" href="historico/semana_17_02-23_02.html">Semana 17/02/2025 - 23/02/2025</a>
+        <a class="history-link" href="historico/semana_10_02-16_02.html">Semana 10/02/2025 - 16/02/2025</a>
+        <a class="history-link" href="historico/semana_03_02-09_02.html">Semana 03/02/2025 - 09/02/2025</a>
+        <a class="history-link" href="historico/semana_27_01-02_02.html">Semana 27/01/2025 - 02/02/2025</a>
+        <a class="history-link" href="historico/semana_20_01-26_01.html">Semana 20/01/2025 - 26/01/2025</a>
+        <a class="history-link" href="historico/semana_13_01-19_01.html">Semana 13/01/2025 - 19/01/2025</a>
+        <a class="history-link" href="historico/semana_06_01-12_01.html">Semana 06/01/2025 - 12/01/2025</a>
+        <a class="history-link" href="historico/semana_30_12-05_01.html">Semana 30/12/2024 - 05/01/2025</a>
+        <a class="history-link" href="historico/semana_23_12-29_12.html">Semana 23/12/2024 - 29/12/2024</a>
+        <a class="history-link" href="historico/semana_16_12-22_12.html">Semana 16/12/2024 - 22/12/2024</a>
+        <a class="history-link" href="historico/semana_09_12-15_12.html">Semana 09/12/2024 - 15/12/2024</a>
+        <a class="history-link" href="historico/semana_02_12-08_12.html">Semana 02/12/2024 - 08/12/2024</a>
+        <a class="history-link" href="historico/semana_25_11-01_12.html">Semana 25/11/2024 - 01/12/2024</a>
+        <a class="history-link" href="historico/semana_18_11-24_11.html">Semana 18/11/2024 - 24/11/2024</a>
+        <a class="history-link" href="historico/semana_11_11-17_11.html">Semana 11/11/2024 - 17/11/2024</a>
+        <a class="history-link" href="historico/semana_04_11-10_11.html">Semana 04/11/2024 - 10/11/2024</a>
+        <a class="history-link" href="historico/semana_28_10-03_11.html">Semana 28/10/2024 - 03/11/2024</a>
+        <a class="history-link" href="historico/semana_21_10-27_10.html">Semana 21/10/2024 - 27/10/2024</a>
+        <a class="history-link" href="historico/semana_14_10-20_10.html">Semana 14/10/2024 - 20/10/2024</a>
+        <a class="history-link" href="historico/semana_07_10-13_10.html">Semana 07/10/2024 - 13/10/2024</a>
+        <a class="history-link" href="historico/semana_30_09-06_10.html">Semana 30/09/2024 - 06/10/2024</a>
       </div>
     </section>
 
-    <div class="footer">Actualizado con compra por departamentos y vista más compacta</div>
+    <div class="footer">Vista compacta arriba, compra en pestaña y semanas históricas también en compacto</div>
   </main>
 
   <script>
